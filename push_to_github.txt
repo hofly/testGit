@@ -1,0 +1,35 @@
+//use git cmd
+
+git init
+git add <folder1> <folder2> <etc.>
+git commit -m "Your message about the commit"
+git remote add origin https://github.com/yourUsername/yourRepository.git
+git push -u origin master
+git push origin master
+
+
+// delete folder or repository; cached: only remove remote and keep local
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
+
+// see all files
+git ls-files
+
+// add/remove all files in folder
+git add --all
+git rm -r --cached *
+
+//remove origin
+$ git remote -v
+# View current remotes
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
+> destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+> destination  https://github.com/FORKER/REPOSITORY.git (push)
+$ git remote rm destination
+# Remove remote
+$ git remote -v
+# Verify it's gone
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
